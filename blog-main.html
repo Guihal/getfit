@@ -1,0 +1,820 @@
+<a class="feed_descr-btn">
+    Подробнее
+</a>
+
+
+<div class="feed__more-wrap">
+<div class="feed__more-con">
+
+    <button class="feed__more">Показать еще</button>
+</div>
+
+</div>
+
+
+
+
+
+<style>
+    
+    .uc-feed .t-feed__post, .uc-feed .t-feed__col-grid__post-wrapper{
+        background-color: #f8f8fe !important; 
+    }
+    
+    .feed__more-wrap{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .feed__more-con{
+        max-width: none;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    
+    .t-feed__post-label{
+
+    }
+    .feed_descr-btn{
+        display: none;
+    }
+    
+    .uc-feed .js-feed .js-feed-container .js-feed-post{
+        margin: 0 !important;
+    }
+    
+    
+    
+    .uc-feed .js-feed-post{
+        display: none;
+    }
+    
+    #rec639412211 .t-feed__parts-switch-btn span, #rec639412211 .t-feed__parts-switch-btn a {
+        padding: 0;
+        border-radius: 50px;
+    }
+    
+    
+    .uc-feed .js-feed-post--show{
+        display: block;
+    }
+    
+    .uc-feed .t-feed__col-grid__wrapper{
+        height: auto !important;
+    }
+
+    .review__descr-btn{
+        display: none;     
+    }
+    
+    .uc-youtube{
+        display: none;
+    }
+    
+    .t-store__card__mark{
+        display: none;
+    }
+
+    
+    
+    .uc-feed__tab-container .js-feed-parts-switcher a{
+        pointer-events: none;
+    }
+
+
+    .getfit__gradient{
+        background: linear-gradient(84deg, rgba(214, 200, 253, 0.50) 16.28%, rgba(203, 239, 140, 0.50) 62.17%);
+    }
+    
+    .getfit__shadow{
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 8px 5px 0px rgba(0, 0, 0, 0.05), 0px 15px 6px 0px rgba(0, 0, 0, 0.01), 0px 23px 6px 0px rgba(0, 0, 0, 0.00);
+    }
+    
+    .uc-feed .js-feed-post-descr {
+        letter-spacing: -0.039px;
+    }
+    
+    
+    .uc-feed .js-feed-post-title a{
+        letter-spacing: -0.039px;
+    }
+    
+
+    .feed_descr-btn--show{
+            display: flex !important;
+            border-radius: 10px !important;
+            border: none !important;
+            background: #CBEF8C !important;
+            max-width: 240px !important;
+            padding: 17px 10px !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 10px !important;
+            flex-shrink: 0 !important;
+            color: #323232 !important;
+            text-align: center !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 500 !important;
+            line-height: 100% !important; /* 14px */
+            letter-spacing: -0.14px !important;
+            text-transform: uppercase !important;
+            font-family: 'Inter',Arial,sans-serif !important;
+            margin-top: 20px; 
+            
+            transition: all 0.3s !important;
+    }
+    
+    .feed_descr-btn--show:hover{
+           background: #C1FF53 !important;
+    }
+    
+    .uc-feed .js-feed-parts-switcher{
+        
+        z-index: 20;
+        box-sizing: border-box;
+        display: flex;
+        padding: 5px 20px 5px 20px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 50px !important;
+        border: 1px solid rgba(50, 50, 50, 0.50 !important);
+        background: #FFF0 !important;
+        margin: 0;
+        transition: all 0.3s;
+        color: #323232;
+        text-align: center;
+        font-size: 13px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height:  120%; /* */
+        letter-spacing: -0.039px !important !important;
+    }
+    
+    
+    .t-feed__container  {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        padding: 0 0px;
+    }
+    
+    
+            
+    .uc-feed .t-col_6 {
+        max-width: 100%;
+    }
+    
+    .uc-feed .js-feed-parts-switcher:hover {
+        background: #323232 !important;
+        color: #ffffff !important;
+    }
+    
+    .uc-feed .js-feed-parts-switcher a{
+        padding: 0 !important;
+        transition: 0.3s;
+    }
+    
+    .uc-feed .js-feed-parts-switcher:hover a{
+        color: #ffffff !important;
+    }
+    .uc-feed .t-feed__parts-switch-wrapper{
+        flex-wrap: wrap;
+        margin-left: 0px;
+        margin-right: 0px;
+        display: flex;
+        gap: 10px;
+        
+        margin-bottom: 90px;
+    }
+    
+    .uc-feed .js-feed-parts-switcher.t-active {
+        background: #CBEF8C !important;
+        border: none !important;
+        opacity: 1;
+    }
+
+    
+    .uc-feed .t915 .js-feed  .js-feed-parts-switcher.t-active a {
+        
+    }
+    
+    #rec639412211 .t-feed__parts-switch-btn.t-active span, #rec639412211 .t-feed__parts-switch-btn.t-active a {
+        color: #323232 !important;
+        opacity: 1 !important;
+    }
+    
+    .uc-feed .uc-feed__tab-container{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .uc-feed .uc-feed__tab-container{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .uc-reviews .t-store__card__textwrapper{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    .uc-feed .js-feed-post{
+        max-width: none;
+        margin: 0;
+        overflow: hidden;
+        border-radius: 20px;
+        background: #F9FAFC;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 8px 5px 0px rgba(0, 0, 0, 0.05), 0px 15px 6px 0px rgba(0, 0, 0, 0.01), 0px 23px 6px 0px rgba(0, 0, 0, 0.00);
+    }
+    
+    
+    .uc-reviews .t-store__card__imgwrapper {
+        max-height: 500px;
+        position: relative;
+        width: 100%;
+        padding-bottom: 520px;
+    }
+    
+    .uc-reviews .t-store__card__imgwrapper .js-product-img{
+        max-height: 500px;
+    }
+    
+    .uc-reviews .js-store-prod-name{
+        letter-spacing: -0.072px !important;
+    }
+    
+    .uc-reviews .js-store-prod-descr{
+        letter-spacing: -0.039px !important;
+    }
+    
+    .uc-reviews .t-store__grid-separator{
+        display: none;
+    }
+    
+    .uc-feed .js-feed-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+    .uc-reviews .js-store-grid-cont::before{
+        display: none;
+    }
+    
+    
+
+    .feed__more {
+        color: var(--unnamed, #FFF);
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 14px */
+        letter-spacing: -0.14px;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: 10px;
+        background: #28292D;
+        border: none !important;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10), 0px 10px 10px 0px rgba(0, 0, 0, 0.09), 0px 23px 14px 0px rgba(0, 0, 0, 0.05), 0px 41px 16px 0px rgba(0, 0, 0, 0.01), 0px 64px 18px 0px rgba(0, 0, 0, 0.00);
+        margin-top: 20px;
+        display: flex;
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        height: 40px;
+        padding: 17px 17px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #28292D !important;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10), 0px 10px 10px 0px rgba(0, 0, 0, 0.09), 0px 23px 14px 0px rgba(0, 0, 0, 0.05), 0px 41px 16px 0px rgba(0, 0, 0, 0.01), 0px 64px 18px 0px rgba(0, 0, 0, 0.00);
+    }
+    
+    .feed__more-wrap{
+        display: none;
+    }
+
+    
+     .feed__more{
+        content: 'Показать еще';
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 14px */
+        letter-spacing: -0.14px;
+        text-transform: uppercase;
+    }
+    
+    .uc-review__title .t-container{
+        text-align: left;
+        
+    }
+    
+    .uc-review__title .t-col{
+        margin: 0;
+        padding: 0 20px !important;
+    }
+    
+    .uc-review__title .t-descr{
+        max-width: 335px;
+        margin: 0;
+    }
+    
+    
+    .t-store__card__imgwrapper__video{
+        
+    }
+    
+   
+    .uc-feed .js-feed-parts-select-container{
+        padding: 0 0 !important;
+    }
+    
+     @media screen and (max-width: 1390px){
+         
+         .uc-feed .t-feed__parts-switch-wrapper {
+
+margin-left: 0px; 
+ margin-right: 0px; 
+
+}
+     }
+    
+    
+    @media screen and (max-width: 960px){
+        .feed_descr-btn--show{
+            max-width: 300px !important;
+            padding: 10px 10px !important;
+    }
+        
+        
+        .uc-feed .js-feed-post{
+            padding: 0!important;
+        }
+        
+        .uc-reviews .t-store__card{
+            width: 100% !important;
+        }
+        
+        
+        .uc-feed .t-feed__parts-switch-wrapper{
+            margin-bottom: 70px;
+        }
+        
+        .uc-feed .js-feed-container{
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+
+
+
+        .uc-feed .feed__more {
+            padding: 0 20px;
+            max-width: none;
+            margin: 0 auto;
+            display: flex;
+            padding: 0 20px;
+            box-sizing: border-box;
+            justify-content: flex-end;
+        }
+    }
+    
+    @media screen and (max-width: 768px){
+        .uc-feed .t-feed__parts-switch-wrapper{
+            margin-bottom: 40px;
+        }
+        
+        .uc-feed .t-feed__col-grid__wrapper{
+            padding: 5px 20px 20px;
+        }
+        .uc-reviews .store__card__wrap_txt-and-opts {
+            padding-top: 10px !important; 
+            padding-bottom: 10px !important;
+        }
+            
+            
+        .uc-review__title .t-title{
+            font-size: 32px !important;
+            margin-bottom: 15px;
+        }
+        
+        .uc-review__title .t-descr{
+            font-size: 14px !important;
+
+        }
+        
+        .feed_descr-btn--show{
+            max-width: 150px !important;
+            padding: 10px 10px !important;
+            margin-bottom: 10px;
+        }
+        
+    }
+    
+    @media screen and (max-width: 560px){
+        .uc-feed .t-feed__parts-switch-wrapper{
+            margin-bottom: 20px;
+        }
+        
+        .uc-feed{
+            padding-top: 20px !important; 
+        }
+        
+        .uc-reviews .store__card__wrap_txt-and-opts {
+            padding-top: 10px !important; 
+            padding-bottom: 10px !important;
+        }
+            
+            
+        .uc-review__title .t-title{
+            font-size: 26px !important;
+            margin-bottom: 15px;
+        }
+        
+        .uc-review__title .t-descr{
+            font-size: 14px !important;
+
+        }
+        
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+         setInterval(function(){
+            const fff = document.querySelector('.fff');
+            const feedTabsCpp = document.querySelector('.t-feed__parts-switch-wrapper');
+            const feedCardsgg = document.querySelector('.js-feed-container');
+            const feedCardLoadMoref = document.querySelector('.feed__more-wrap');
+
+            
+            
+            if(fff && feedCardsgg && feedTabsCpp && feedCardLoadMoref){
+                let fffPos = fff.getBoundingClientRect();
+                feedTabsCpp.style.paddingLeft = fffPos.left + "px";
+                feedTabsCpp.style.paddingRight = fffPos.left + "px";
+                feedCardsgg.style.paddingRight = fffPos.left + "px";
+                feedCardsgg.style.paddingLeft = fffPos.left + "px";
+                feedCardLoadMoref.style.paddingRight = fffPos.left + "px";
+                feedCardLoadMoref.style.paddingLeft = fffPos.left + "px";
+            }
+            
+            
+            
+        }, 100); 
+     
+  
+                
+        
+
+        function feed(){
+                const feedBlock = document.querySelector('.uc-feed');
+                
+                if(feedBlock){
+                        const feedTab = feedBlock.querySelectorAll('.js-feed-parts-switcher');
+                        const feedItem = feedBlock.querySelectorAll('.js-feed-post'); 
+                        const feedItemCont = feedBlock.querySelectorAll('.t-feed__col-grid__wrapper');
+
+
+                        if(feedTab && feedItem && feedItemCont && feedItemCont.length == feedItem.length && feedTab.length > 0 ){
+                            
+                            clearInterval(setIntervalFeed);
+                            let tempShow = 20;
+                            function feedPost(){
+                                const feedItem = feedBlock.querySelectorAll('.js-feed-post');
+                                
+                                
+                                const jsFeed = document.querySelector('.js-feed');
+                                const feedMoreWrap = document.querySelector('.feed__more-wrap');
+                                const feedMore = document.querySelector('.feed__more');
+                                
+                                if(jsFeed && feedMore && feedMoreWrap && feedItem){
+                                    if(!jsFeed.querySelector('.feed__more')){
+                                        let feedmoreClone = feedMoreWrap.cloneNode(true);
+                                        feedmoreClone.style.display = "flex";
+                                        
+                                        jsFeed.append(feedmoreClone);
+                                    }
+                                    
+                                    
+                                    for(let i = 0; i < feedItem.length; i++){
+                                        if(i < tempShow){
+                                            feedItem[i].classList.add("js-feed-post--show");
+                                        }
+                                    }
+                                    
+                 
+                                 for(let i = 0; i < feedItem.length; i++){
+                                        if(i < tempShow){
+                                            feedItem[i].classList.add("js-feed-post--show");
+                                        }
+                                    }
+                                
+                                    
+                                    
+                                }
+                                
+                            }
+                            feedPost();
+                            
+
+                            
+                            
+                            const jsFeed = document.querySelector('.js-feed');
+                            if(jsFeed){
+                                    jsFeed.querySelector('.feed__more').addEventListener('click', function(){
+                                        const feedItem = feedBlock.querySelectorAll('.js-feed-post'); 
+                                        tempShow = tempShow + 1;
+                                        for(let i = 0; i < feedItem.length; i++){
+                                                
+                                                if(i < tempShow){
+                                                    
+                                                    feedItem[i].classList.add("js-feed-post--show");
+                                                    if(feedItem.length <= tempShow - 2){
+                                                        jsFeed.querySelector('.feed__more').style.display = "none";
+                                                    }
+                                                    else if(feedItem.length > tempShow - 1){
+                                                        jsFeed.querySelector('.feed__more').style.display = "flex";
+                                                    }
+                                                }
+                                                
+                                        }
+                                    })
+                                   if(feedItem.length < tempShow - 1){
+                                                        jsFeed.querySelector('.feed__more').style.display = "none";
+                                                    }
+                                                    else if(feedItem.length > tempShow - 2){
+                                                        jsFeed.querySelector('.feed__more').style.display = "flex";
+                                                    }
+                                
+                            }
+                            
+                            
+                            
+                           
+                            
+                            
+                            function feedCard(){
+                                const feedTab = feedBlock.querySelectorAll('.js-feed-parts-switcher');
+                                const feedItem = feedBlock.querySelectorAll('.js-feed-post'); 
+                                const feedItemCont = feedBlock.querySelectorAll('.t-feed__col-grid__wrapper');
+                                const feedItemDescr = document.querySelector('.feed_descr-btn'); 
+                                            let feedItemDescrTemp;
+                                            if(feedItemDescr){
+                                                    const feedItem = feedBlock.querySelectorAll('.js-feed-post');
+                                                    const feedItemCont = feedBlock.querySelectorAll('.t-feed__col-grid__wrapper');
+                                                    for(let i = 0; i < feedItem.length; i++){
+                                                        const feedItemDescrn = feedItem[i].querySelector('.feed_descr-btn');   
+                                                            if(!feedItemDescrn){
+                                                                    feedItemDescrTemp = feedItemDescr.cloneNode(true);
+                                                                    let hrefFeed = feedItem[i].querySelector('a').href;
+                                                                    feedItemDescrTemp.classList.add('feed_descr-btn--show');
+                                                                    if(hrefFeed){
+                                                                            feedItemDescrTemp.href = hrefFeed;
+
+                                                                            feedItemCont[i].append(feedItemDescrTemp);
+                                                                                                                
+                                                                    }
+                                                                    
+                                                            }
+                                                    }
+                                            }
+
+
+                            
+                            
+
+                                        let dataFeedwArr = [];
+                                        let feedTabInItemCon = document.createElement('div');
+                                        feedTabInItemCon.className = "uc-feed__tab-container";
+                                        let feedItemTemp;
+                                        let feedTabTemp;
+                                        let feedTabTempArr;
+                                        
+                                        
+                                        
+                        
+                                        for(let i = 0; i < feedTab.length; i++){
+                                            if(localStorage.getItem('tabid1') == feedTab[i].getAttribute("data-feedpart-title")){
+                                                    feedTab[i].click();
+                                                    window.localStorage.clear();
+                                            }
+                                                feedTabTempArr = feedTab[i].getAttribute("data-feedpart-title");
+                                                dataFeedwArr.push(feedTabTempArr);
+                                                
+                                                feedTab[i].addEventListener('click', (event) => {
+                                                    const feedItem = feedBlock.querySelectorAll('.js-feed-post');
+                                                    const feedItemCont = feedBlock.querySelectorAll('.t-feed__col-grid__wrapper');
+                                                    for(let i = 0; i < feedItem.length; i++){
+                                                        const feedItemDescrn = feedItem[i].querySelector('.feed_descr-btn');   
+                                                            if(!feedItemDescrn){
+                                                                    feedItemDescrTemp = feedItemDescr.cloneNode(true);
+                                                                    let hrefFeed = feedItem[i].querySelector('a').href;
+                                                                    feedItemDescrTemp.classList.add('feed_descr-btn--show');
+                                                                    if(hrefFeed){
+                                                                            feedItemDescrTemp.href = hrefFeed;
+             
+                                                                            feedItemCont[i].append(feedItemDescrTemp);
+                                                                                                                
+                                                                    }
+                                                                    
+                                                            }
+                                                    }
+                                                })
+                                                
+                                            
+                                        }
+
+
+
+                                        
+                                        for(let i = 0; i < feedItem.length; i++){
+                                                if(!feedItem[i].classList.contains('js-feed__on')){
+                                                        feedItem[i].classList.add('js-feed__on');
+                                                        feedItemTemp = feedTabInItemCon.cloneNode(true); 
+                                                        feedItemCont[i].prepend(feedItemTemp);
+                                                }
+                                                
+                                                
+                                                
+                                               
+                                        }
+                                        
+                                        const feedTabInItemConIn = feedBlock.querySelectorAll('.uc-feed__tab-container');
+                                        
+                                        if(feedTabInItemConIn && feedTabInItemConIn.length == feedItem.length && dataFeedwArr.length > 0){
+                                                
+                                                for(let i = 0; i < feedItem.length; i++){
+                                                    feedItem[i].removeAttribute("data-post-uid");
+                                                        if(!feedItem[i].classList.contains('js-feed__onon')){
+                                                                feedItem[i].classList.add('js-feed__onon');
+                                                                for(let j = 1; j < dataFeedwArr.length; j++){
+                                                                        
+                                                                        if(feedItem[i].querySelector(".t-feed__post-label").textContent.includes(dataFeedwArr[j])){
+                                                                            
+                                                                            if(feedTab[j].classList.contains('t-active')){
+                                                                                
+                                                                                feedTabTemp = feedTab[j].cloneNode(true);
+             
+                                                                                
+                                                                                feedTabTemp.classList.remove('t-active');
+                                                                                feedTabInItemConIn[i].prepend(feedTabTemp);
+                                                                            } else{
+                                                                                
+                                                                                feedTabTemp = feedTab[j].cloneNode(true);
+                          
+                                                                                feedTabInItemConIn[i].prepend(feedTabTemp);
+                                                                            }
+                                                                        }   
+                                                                    
+                                                                    
+                                                                    
+                                                                }
+                                                        }
+                                                } 
+                                        }
+                            }
+                            
+                            feedCard();
+                            
+                            let feedTabTempArr111;
+                            
+                            function Tabclick(){
+                                                let tabsInCardsTemp1;
+                                                const tabsInCards1 = feedBlock.querySelectorAll('.js-feed-container .js-feed-parts-switcher');
+                                                let tabsInCards1Temp;
+                                                if(tabsInCards1 && tabsInCards1.length > 0){
+                                                            
+                                                            
+                                                        for(let i = 0; i < tabsInCards1.length; i++){
+                                                            
+                                                           
+                                                            feedTabTempArr111 = tabsInCards1[i].addEventListener('click', function() {
+                                                                    
+                                                                    for(let j = 0; j < feedTab.length; j++){
+                                                                        if(tabsInCards1[i].getAttribute("data-feedpart-title") === feedTab[j].getAttribute("data-feedpart-title")){
+                                                                            feedTab[j].click();
+                                                                            feedBlock.scrollIntoView(true);
+                                                                            
+                                                                        }
+                                                                    }
+                                                            })
+                                                        }
+                                                }
+                                                
+                                                let ffuck2 = 0;
+                                                
+                                                
+                                            
+                            }
+                            Tabclick();
+                            setInterval(Tabclick, 300);
+                            
+                            
+                           
+                            
+                             
+                            for(let m = 0; m < feedTab.length; m++){
+                                
+                                    feedTab[m].addEventListener('click', function (event) {
+                                        
+                                        tempShow = 20;
+                                        const feedItem = feedBlock.querySelectorAll('.js-feed-post'); 
+                                        feedTab[m].scrollIntoView(true);
+                                        
+                                        
+                                        if(feedItem.length < tempShow - 2){
+                                                        jsFeed.querySelector('.feed__more').style.display = "none";
+                                                    }
+                                                    else if(feedItem.length > tempShow - 2){
+                                                        jsFeed.querySelector('.feed__more').style.display = "flex";
+                                                    }
+                                                    
+                                        setTimeout(function(){
+                                            const feedItem = feedBlock.querySelectorAll('.js-feed-post'); 
+                                            for(let i = 0; i < feedItem.length; i++){
+                                                  
+                                                        if(i < tempShow){
+                                                            feedItem[i].classList.add("js-feed-post--show");
+                                                        }
+                                            }
+                                        }, 300);
+                                        const tabsInCards1 = feedBlock.querySelectorAll('.js-feed-container .js-feed-parts-switcher');
+                                         
+                                    })
+                            }
+                            
+                            
+                            
+                            
+                            Tabclick()
+                            let intervalTab = setInterval(function(){
+                                    feedCard();
+                                    feedPost();
+                            }, 10);
+
+                                            
+
+
+                                        
+
+
+                                        
+                                         
+                
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+    
+                        }
+                }  
+        }
+        
+        
+        
+        
+        
+            
+        
+        
+        let setIntervalFeed = setInterval(feed, 10);
+        
+        
+
+
+
+
+    
+</script>

@@ -1,0 +1,693 @@
+<a class="review__descr-btn">
+    Подробнее
+</a>
+
+
+<style>
+
+    body:has(.uc-reviews .t-popup_show) {
+        z-index: 100 !important;
+    }
+    
+    body:has(.uc-reviews .t-popup_show) .t450__menu__content{
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .uc-reviews .t-item .t-store__card__wrap_txt-and-btns{
+        height: auto !important;
+    }
+    
+    
+    
+    .review__descr-btn{
+        display: none;     
+    }
+    
+    .uc-youtube{
+        display: none;
+    }
+    
+    .t-store__card__mark{
+        display: none;
+    }
+
+
+    .getfit__gradient{
+        background: linear-gradient(84deg, rgba(214, 200, 253, 0.50) 16.28%, rgba(203, 239, 140, 0.50) 62.17%);
+    }
+    
+    .getfit__shadow{
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 8px 5px 0px rgba(0, 0, 0, 0.05), 0px 15px 6px 0px rgba(0, 0, 0, 0.01), 0px 23px 6px 0px rgba(0, 0, 0, 0.00);
+    }
+
+    .review__descr-btn--show{
+            display: flex !important;
+            border-radius: 10px !important;
+            border: none !important;
+            background: #CBEF8C !important;
+            max-width: 240px !important;
+            padding: 17px 10px !important;
+            justify-content: center !important;
+            align-items: center !important;
+            gap: 10px !important;
+            flex-shrink: 0 !important;
+            color: #323232 !important;
+            text-align: center !important;
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 500 !important;
+            line-height: 100% !important; /* 14px */
+            letter-spacing: -0.14px !important;
+            text-transform: uppercase !important;
+            font-family: 'Inter',Arial,sans-serif !important;
+            margin-left: 20px; 
+            
+            transition: all 0.3s !important;
+    }
+    
+    .review__descr-btn--show:hover{
+           background: #C1FF53 !important;
+    }
+    
+    .uc-reviews .js-store-parts-switcher{
+        display: flex;
+        padding: 5px 20px 5px 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        border: 1px solid rgba(50, 50, 50, 0.50);
+        background: #FFF;
+        margin: 0;
+        transition: all 0.3s;
+        color: #323232;
+        text-align: center;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height:  120%; /* */
+        letter-spacing: -0.039px !important;
+    }
+    
+    
+    .t-container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+    
+    .uc-reviews .js-store-parts-switcher.t-active {
+        background: #CBEF8C;
+        border: none;
+        opacity: 1;
+    }
+    
+    .uc-reviews .js-store-parts-switcher:hover {
+        background: #323232 !important;
+        color: #ffffff !important;
+    }
+    
+    .uc-reviews .t-store__parts-switch-wrapper{
+        flex-wrap: wrap;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex;
+        gap: 10px;
+        
+        margin-bottom: 90px;
+    }
+    
+    .uc-reviews .uc-reviews__tab-container{
+        display: flex;
+        gap: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .uc-reviews .t-store__card__textwrapper{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    .uc-reviews .t-store__card{
+        max-width: none;
+        margin: 0;
+        overflow: hidden;
+        border-radius: 20px;
+        background: #F9FAFC;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 8px 5px 0px rgba(0, 0, 0, 0.05), 0px 15px 6px 0px rgba(0, 0, 0, 0.01), 0px 23px 6px 0px rgba(0, 0, 0, 0.00);
+    }
+    
+    
+    .uc-reviews .t-store__card__imgwrapper {
+        max-height: 500px;
+        position: relative;
+        width: 100%;
+        padding-bottom: 520px;
+    }
+    
+    .uc-reviews .t-store__card__imgwrapper .js-product-img{
+        max-height: 500px;
+    }
+    
+    .uc-reviews .js-store-prod-name{
+        letter-spacing: -0.072px !important;
+    }
+    
+    .uc-reviews .js-store-prod-descr{
+        letter-spacing: -0.039px !important;
+    }
+    
+    .uc-reviews .t-store__grid-separator{
+        display: none;
+    }
+    
+    .uc-reviews .js-store-grid-cont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0 0;
+        box-sizing: border-box;
+    }
+    
+    .uc-reviews .js-store-grid-cont::before{
+        display: none;
+    }
+    
+    
+    .uc-reviews .t-store__load-more-btn-wrap {
+        padding: 0 20px;
+        max-width: none;
+        margin: 0 auto;
+        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+        justify-content: flex-end;
+    }
+    
+    .uc-reviews .js-store-load-more-btn{
+        margin-top: 20px;
+        display: flex;
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+        height: 40px;
+        padding: 17px 17px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #28292D !important;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10), 0px 10px 10px 0px rgba(0, 0, 0, 0.09), 0px 23px 14px 0px rgba(0, 0, 0, 0.05), 0px 41px 16px 0px rgba(0, 0, 0, 0.01), 0px 64px 18px 0px rgba(0, 0, 0, 0.00);
+    }
+    
+    .uc-reviews .js-store-load-more-btn td{
+        font-size: 0;
+    }
+    
+    .uc-reviews .js-store-load-more-btn td:before{
+        content: 'Показать еще';
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 14px */
+        letter-spacing: -0.14px;
+        text-transform: uppercase;
+    }
+    
+    .uc-review__title .t-container{
+        text-align: left;
+        
+    }
+    
+    .uc-review__title .t-col{
+        margin: 0;
+        padding: 0 20px!important;
+    }
+    
+    .uc-review__title .t-descr{
+        max-width: 335px;
+        margin: 0;
+    }
+    
+    
+    .t-store__card__imgwrapper__video{
+        
+    }
+    
+   
+    
+    
+    
+    @media screen and (max-width: 960px){
+        .review__descr-btn--show{
+            max-width: 300px !important;
+            padding: 10px 10px !important;
+    }
+        
+        
+        .uc-reviews .t-store__card{
+            padding: 0!important;
+        }
+        
+        .uc-reviews .t-store__card{
+            width: 100% !important;
+        }
+        
+        
+        .uc-reviews .t-store__parts-switch-wrapper{
+            margin-bottom: 70px;
+        }
+        
+        .uc-reviews .js-store-grid-cont{
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        .uc-reviews .t-store__card__imgwrapper {
+            max-height: 300px;
+            position: relative;
+            width: 100%;
+            padding-bottom: 320px;
+        }
+        
+        .uc-reviews .t-store__card__imgwrapper .js-product-img{
+            max-height: 300px;
+        }
+        
+        .uc-reviews .js-store-load-more-btn{
+            width: 100%;
+        }
+        
+        .uc-reviews .t-store__load-more-btn-wrap {
+            padding: 0 20px;
+            max-width: none;
+            margin: 0 auto;
+            display: flex;
+            padding: 0 20px;
+            box-sizing: border-box;
+            justify-content: flex-end;
+        }
+    }
+    
+    @media screen and (max-width: 768px){
+        .uc-reviews .t-store__parts-switch-wrapper{
+            margin-bottom: 40px;
+        }
+        
+        
+        .uc-reviews .store__card__wrap_txt-and-opts {
+            padding-top: 10px !important; 
+            padding-bottom: 10px !important;
+        }
+            
+            
+        .uc-review__title .t-title{
+            font-size: 32px !important;
+            margin-bottom: 15px;
+        }
+        
+        .uc-review__title .t-descr{
+            font-size: 14px !important;
+
+        }
+        
+        .review__descr-btn--show{
+            max-width: 150px !important;
+            padding: 10px 10px !important;
+            margin-bottom: 10px;
+        }
+        
+    }
+    
+    @media screen and (max-width: 560px){
+        .uc-reviews .t-store__parts-switch-wrapper{
+            margin-bottom: 20px;
+        }
+        
+        .uc-reviews{
+            padding-top: 20px !important; 
+        }
+        
+        .uc-reviews .store__card__wrap_txt-and-opts {
+            padding-top: 10px !important; 
+            padding-bottom: 10px !important;
+        }
+            
+            
+        .uc-review__title .t-title{
+            font-size: 26px !important;
+            margin-bottom: 15px;
+        }
+        
+        .uc-review__title .t-descr{
+            font-size: 14px !important;
+
+        }
+        
+    }
+    
+    
+    .uc-reviews .t-store__parts-switch-wrapper, .uc-reviews .js-store-grid-cont{
+        box-sizing: border-box;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+        
+     
+  
+        setInterval(function(){
+            const ggg = document.querySelector('.ggg');
+            const reviewTabsCpp = document.querySelector('.uc-reviews .t-store__parts-switch-wrapper');
+            const reviewCardsgg = document.querySelector('.uc-reviews .js-store-grid-cont');
+            const reviewCardLoadMore = document.querySelector('.t-store__load-more-btn-wrap');
+            if(reviewCardsgg && reviewTabsCpp && ggg){
+                let gggPos = ggg.getBoundingClientRect();
+                reviewTabsCpp.style.paddingLeft = gggPos.left + "px";
+                reviewTabsCpp.style.paddingRight = gggPos.left + "px";
+                reviewCardsgg.style.paddingRight = gggPos.left + "px";
+                reviewCardsgg.style.paddingLeft = gggPos.left + "px";
+                if(reviewCardLoadMore){
+                    reviewCardLoadMore.style.paddingLeft = gggPos.left + "px";
+                    reviewCardLoadMore.style.paddingRight = gggPos.left + "px";
+                }
+            }
+            
+            
+            
+        }, 100);
+        
+
+        function review(){
+                const reviewBlock = document.querySelector('.uc-reviews');
+
+                if(reviewBlock){
+                        const reviewTab = reviewBlock.querySelectorAll('.js-store-parts-switcher');
+                        const reviewItem = reviewBlock.querySelectorAll('.t-store__card'); 
+                        const reviewItemCont = reviewBlock.querySelectorAll('.store__card__wrap_txt-and-opts');
+                        const reviewItemWrapper = reviewBlock.querySelectorAll('.t-store__card__wrap_txt-and-btns');
+
+                        if(reviewItem && reviewTab && reviewTab.length > 0 && reviewItemCont && reviewItemWrapper && reviewItem.length === reviewItemCont.length & reviewItemCont.length > 0){
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            let gui = setInterval(function() {
+                                            const reviewItemDescr = document.querySelector('.review__descr-btn'); 
+                                            let reviewItemDescrTemp;
+                                            
+                                            if(reviewItemDescr){
+                                                    const reviewItem = reviewBlock.querySelectorAll('.t-store__card'); 
+                                                    const reviewItemCont = reviewBlock.querySelectorAll('.store__card__wrap_txt-and-opts');
+                                                    for(let i = 0; i < reviewItem.length; i++){
+                                                        const reviewItemnnn = reviewItem[i].querySelector('.review__descr-btn');   
+                                                            if(!reviewItemnnn){
+                                                                    reviewItemDescrTemp = reviewItemDescr.cloneNode(true);
+                                                                    let hrefReview = reviewItem[i].querySelector('a').href;
+                                                                    reviewItemDescrTemp.classList.add('review__descr-btn--show');
+                                                                    if(hrefReview){
+                                                                            reviewItemDescrTemp.href = hrefReview;
+                                                                            reviewItemCont[i].append(reviewItemDescrTemp);
+                                                                    }
+                                                                    
+                                                            }
+                                                    }
+                                            }
+
+                                        }, 10);
+                            
+                            
+                                        clearInterval(setIntervalReview);
+                                        let dataReviewArr = [];
+                                        let reviewTabInItemCon = document.createElement('div');
+                                        reviewTabInItemCon.className = "uc-reviews__tab-container";
+                                        let reviewItemTemp;
+                                        let reviewTabTemp;
+                                        let reviewTabTempArr;
+                                        
+                                        for(let i = 0; i < reviewTab.length; i++){
+                                                reviewTabTempArr = reviewTab[i].getAttribute("data-storepart-uid");
+                                                dataReviewArr.push(reviewTabTempArr);
+                                                if(reviewTab[i].innerText.includes('Видео')){
+                                                    reviewVideoTemp = reviewTab[i].getAttribute("data-storepart-uid");
+                                                }
+                                        }
+
+
+
+                                        
+                                        for(let i = 0; i < reviewItem.length; i++){
+                                                if(!reviewItem[i].classList.contains('js-product__on')){
+                                                        reviewItem[i].classList.add('js-product__on');
+                                                        reviewItemWrapper[i].style.height = "auto";
+                                                        reviewItemTemp = reviewTabInItemCon.cloneNode(true); 
+                                                        reviewItemCont[i].prepend(reviewItemTemp);
+                                                }
+                                        }
+                                        
+                                        const reviewTabInItemConIn = reviewBlock.querySelectorAll('.uc-reviews__tab-container');
+                                        
+                                        if(reviewTabInItemConIn && reviewTabInItemConIn.length == reviewItem.length && dataReviewArr.length > 0){
+                                                for(let i = 0; i < reviewItem.length; i++){
+                                                        if(!reviewItem[i].classList.contains('js-product__onon')){
+                                                                reviewItem[i].classList.add('js-product__onon');
+                                                                for(let j = 0; j < dataReviewArr.length; j++){
+                                                                    
+                                                                    if(reviewItem[i].getAttribute("data-product-part-uid").includes(dataReviewArr[j])){
+                                                                            if(reviewTab[j].classList.contains('t-active')){
+                                                                                reviewTabTemp = reviewTab[j].cloneNode(true);
+                                                                                reviewTabTemp.classList.remove('t-active');
+                                                                                reviewTabInItemConIn[i].prepend(reviewTabTemp);
+                                                                            } else{
+                                                                                reviewTabTemp = reviewTab[j].cloneNode(true);
+                                                                                reviewTabInItemConIn[i].prepend(reviewTabTemp);
+                                                                            }
+                                                                    }    
+                                                                    
+                                                                }
+                                                        }
+                                                } 
+                                        }
+
+
+                                        
+
+
+                                        
+                                         
+                                        
+                                        for(let i = 0; i < reviewTab.length; i++){
+                                            reviewTab[i].addEventListener('click', function() {
+                                                
+                                                
+                                                let clickReviewTab = setInterval(function() {
+                                                    const reviewItem = reviewBlock.querySelectorAll('.t-store__card'); 
+                                                    const reviewItemCont = reviewBlock.querySelectorAll('.store__card__wrap_txt-and-opts');
+                                                    const reviewItemWrapper = reviewBlock.querySelectorAll('.t-store__card__wrap_txt-and-btns');
+                                                    let fuck = 0;                                               
+                                                    if(reviewItem && reviewTab && reviewTab.length > 0 && reviewItemCont && reviewItemWrapper && reviewItem.length === reviewItemCont.length & reviewItemCont.length > 0){
+                                                        if(fuck == 0){
+                                                            fuck = 1;
+                                                            for(let i = 0; i < reviewItem.length; i++){
+                                                                reviewItemWrapper[i].style.height = "auto";
+                                                                if(!reviewItem[i].querySelector('.uc-reviews__tab-container')){
+                                                                    reviewItemTemp = reviewTabInItemCon.cloneNode(true); 
+                                                                    reviewItemCont[i].prepend(reviewItemTemp);
+                                                                }
+                                                            }
+                                                            const reviewTabInItemConIn = reviewBlock.querySelectorAll('.uc-reviews__tab-container');
+                                             
+                                                            if(reviewTabInItemConIn && reviewTabInItemConIn.length == reviewItem.length && dataReviewArr.length > 0){
+                                                                for(let i = 0; i < reviewItem.length; i++){
+                                                                                                                            
+                                                                    for(let j = 0; j < dataReviewArr.length; j++){
+                                                                                                                                            
+                                                                        if(reviewItem[i].getAttribute("data-product-part-uid").includes(dataReviewArr[j]) && !reviewTabInItemConIn[i].classList.contains('.uc-reviews__tab-container--on')){
+
+                                                                            if(reviewTab[j].classList.contains('t-active')){
+                                                                                reviewTabTemp = reviewTab[j].cloneNode(true);
+                                                                                reviewTabTemp.classList.remove('t-active');
+                                                                                reviewTabInItemConIn[i].prepend(reviewTabTemp);
+                                                                            } else{
+                                                                                reviewTabTemp = reviewTab[j].cloneNode(true);
+                                                                                reviewTabInItemConIn[i].prepend(reviewTabTemp);
+                                                                            }
+                                                                            
+                                                                        }    
+                                                                                                                                        
+                                                                    }
+                                                                    reviewTabInItemConIn[i].classList.add('.uc-reviews__tab-container--on');
+                                                                                                                            
+                                                                }
+                                                                
+                                                                
+                                                            }
+                                                            
+
+                                                        }
+                                                    }
+                                                    
+                                                }, 10);
+                                            })
+                                            
+                                            
+                                            
+                                        }
+                                        
+                                        for(let i = 0; i < reviewTab.length; i++){
+                                                if(localStorage.getItem('tabid') == reviewTab[i].getAttribute("data-storepart-uid")){
+                                                    reviewTab[i].click();
+                                                    window.localStorage.clear();
+                                            }
+                                        }
+                                        
+                                        const reviewLoadMore = reviewBlock.querySelector('.js-store-load-more-btn');
+                                        
+                                        if(reviewLoadMore){
+                                            reviewLoadMore.addEventListener('click', function() {
+                                            
+                                                
+                                                
+                                                let clickReviewTab1 = setInterval(function() {
+                                                    const reviewItem = reviewBlock.querySelectorAll('.t-store__card'); 
+                                                    const reviewItemCont = reviewBlock.querySelectorAll('.store__card__wrap_txt-and-opts');
+                                                    const reviewItemWrapper = reviewBlock.querySelectorAll('.t-store__card__wrap_txt-and-btns');
+                                                    let fuck = 0;                                               
+                                                    if(reviewItem && reviewTab && reviewTab.length > 0 && reviewItemCont && reviewItemWrapper && reviewItem.length === reviewItemCont.length & reviewItemCont.length > 0){
+                                                        if(fuck == 0){
+                                                            fuck = 1;
+                                                            for(let i = 0; i < reviewItem.length; i++){
+                                                                reviewItemWrapper[i].style.height = "auto";
+                                                                if(!reviewItem[i].querySelector('.uc-reviews__tab-container')){
+                                                                    reviewItemTemp = reviewTabInItemCon.cloneNode(true); 
+                                                                    reviewItemCont[i].prepend(reviewItemTemp);
+                                                                }
+                                                            }
+                                                            const reviewTabInItemConIn = reviewBlock.querySelectorAll('.uc-reviews__tab-container');
+                                             
+                                                            if(reviewTabInItemConIn && reviewTabInItemConIn.length == reviewItem.length && dataReviewArr.length > 0){
+                                                                for(let i = 0; i < reviewItem.length; i++){
+                                                                                                                            
+                                                                    for(let j = 0; j < dataReviewArr.length; j++){
+                                                                                                                                            
+                                                                        if(reviewItem[i].getAttribute("data-product-part-uid").includes(dataReviewArr[j]) && !reviewTabInItemConIn[i].classList.contains('.uc-reviews__tab-container--on')){
+
+                                                                            if(reviewTab[j].classList.contains('t-active')){
+                                                                                reviewTabTemp = reviewTab[j].cloneNode(true);
+                                                                                reviewTabTemp.classList.remove('t-active');
+                                                                                reviewTabInItemConIn[i].prepend(reviewTabTemp);
+                                                                            } else{
+                                                                                reviewTabTemp = reviewTab[j].cloneNode(true);
+                                                                                reviewTabInItemConIn[i].prepend(reviewTabTemp);
+                                                                            }
+                                                                            
+                                                                        }    
+                                                                                                                                        
+                                                                    }
+                                                                    reviewTabInItemConIn[i].classList.add('.uc-reviews__tab-container--on');
+                                                                                                                            
+                                                                }
+                                                                
+                                                                
+                                                            }
+                                                            
+
+                                                        }
+                                                    }
+                                                    
+                                                }, 10);
+                                            })
+                                            
+                                            
+                                            
+                                        }
+                                        
+                                        
+                                        
+                                        
+                                        function clickTabsRew(){
+                                            const reviewContainer = reviewBlock.querySelector('.js-store-grid-cont');
+                                            
+                                            if(reviewContainer){
+                                                let tabsInCardsTemp;
+                                                const tabsInCards = reviewContainer.querySelectorAll('.js-store-parts-switcher');
+                                                let fuck2 = 0;
+                                                if(tabsInCards && tabsInCards.length > 0){
+                                                    for(let i = 0; i < tabsInCards.length; i++){
+                                                        tabsInCards[i].addEventListener('click', function() {
+                                                                tabsInCardsTemp = tabsInCards[i].getAttribute("data-storepart-uid");
+                                                                for(let j = 0; j < reviewTab.length; j++){
+                                                                    if(tabsInCardsTemp === reviewTab[j].getAttribute("data-storepart-uid")){
+                                                                        reviewTab[j].click();
+                                                                        reviewBlock.scrollIntoView(true);
+                                                                    }
+                                                                }
+                                                        })
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+                                        setInterval(clickTabsRew, 200);
+                                        
+                                        
+                                        
+                                        
+                                        
+        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+    
+                        }
+                }  
+        }
+        
+        
+        
+        
+        
+            
+        
+        
+        let setIntervalReview = setInterval(review, 10);
+        
+        
+
+
+
+
+    
+</script>
